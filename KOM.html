@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOM.F</title>
+  <link rel="stylesheet" href="KOM.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo"> KOMPLEK F</div>
+    <nav class="nav">
+      <a href="#about">Tentang</a>
+      <a href="#team">Tim</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Selamat Datang di <span>PROFIL</span></h1>
+    <p>Membangun generasi muda berdaya saing digital dan berjiwa kolaboratif.</p>
+    <button onclick="scrollToSection('about')"><a href="jelajah.html" class="btn-jelajah">Jelajahi</a></button>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>Tentang Kami</h2>
+    <p>Di tengah arus perubahan global yang kian cepat, [Nama Organisasi] berdiri sebagai simbol semangat baru dalam membangun peradaban masa depan. Kami memadukan kekuatan teknologi, kreativitas, dan nilai kemanusiaan untuk melahirkan solusi yang relevan dan berdaya guna. Dengan visi jangka panjang dan komitmen pada inovasi berkelanjutan, organisasi ini menjadi ruang bagi ide-ide besar tumbuh, diuji, dan diwujudkan. Kami percaya bahwa masa depan bukan untuk ditunggu, melainkan untuk diciptakan—dan di sinilah langkah itu dimulai.</p>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="team">
+    <h2>Tim Kami</h2>
+    <div class="members">
+      <div class="card">
+        <img src="img/member1.jpg" alt="Ketua">
+        <h3>Ahmad Fauzan</h3>
+        <p>Ketua Umum</p>
+      </div>
+      <div class="card">
+        <img src="img/member2.jpg" alt="Sekretaris">
+        <h3>Nadia Ramadhani</h3>
+        <p>Sekretaris</p>
+      </div>
+      <div class="card">
+        <img src="img/member3.jpg" alt="Teknologi">
+        <h3>Rizky Saputra</h3>
+        <p>Koordinator Teknologi</p>
+      </div>
+      <div class="card">
+        <img src="img/member2.jpg" alt="Sekretaris">
+        <h3>Nadia Ramadhani</h3>
+        <p>Sekretaris</p>
+      </div>
+      <div class="card">
+        <img src="img/member3.jpg" alt="Teknologi">
+        <h3>Rizky Saputra</h3>
+        <p>Koordinator Teknologi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Hubungi Kami</h2>
+    <form id="waForm">
+  <input type="text" id="nama" placeholder="Nama Anda" required>
+  <input type="text" id="email" placeholder="Email atau Kontak Anda" required>
+  <textarea id="pesan" placeholder="Pesan" required></textarea>
+  <button type="submit">Kirim via WhatsApp</button>
+</form>
+
+<script>
+  document.getElementById("waForm").addEventListener("submit", function(event){
+    event.preventDefault(); // mencegah reload halaman
+
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+    let pesan = document.getElementById("pesan").value;
+
+    // Ganti nomor berikut dengan nomor WhatsApp kamu (gunakan format internasional tanpa +)
+    let nomorWA = "6282315750980"; 
+
+    let url = `https://wa.me/${nomorWA}?text=Halo, saya ${nama}%0AEmail/Kontak: ${email}%0APesan: ${pesan}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 TechUnity | Dibuat dengan ❤️ oleh Tim Web Dev</p>
+  </footer>
+
+  <script src="KOM.js"></script>
+</body>
+</html>
+

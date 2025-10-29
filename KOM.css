@@ -1,0 +1,293 @@
+/* ==========================================================
+   KOM.CSS — PROFIL ORGANISASI TECHUNITY (FUTURISTIK & ELEGAN)
+   ========================================================== */
+
+/* ==== FONTS & RESET ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0a0f1e, #1c003d);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ==== HEADER ==== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 70px;
+  backdrop-filter: blur(15px);
+  background: rgba(20, 20, 40, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav a {
+  margin: 0 15px;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ffff;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: #00ffff;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ==== HERO ==== */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #15002b, #001f3f);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: conic-gradient(from 90deg, #00ffff33, #ff00ff33, #00ffff33);
+  animation: rotateBg 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.8em;
+  z-index: 1;
+  text-shadow: 0 0 20px #00ffff;
+}
+
+.hero h1 span {
+  color: #ffe600;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #dcdcdc;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 0 20px #00ffff;
+  transition: 0.4s;
+}
+
+.hero button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #00ffff;
+}
+
+.btn-jelajah {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==== SECTIONS ==== */
+section {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.about, .team, .contact {
+  background: rgba(255, 255, 255, 0.05);
+  margin: 50px auto;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+  color: #e0e0e0;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+/* ==== TEAM ==== */
+.team .members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  padding: 25px;
+  width: 230px;
+  transition: 0.4s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+/* ==== CONTACT ==== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact input:focus, .contact textarea:focus {
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.contact button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.contact button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #00ffff;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: rgba(0, 0, 20, 0.9);
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+}
+
+footer p span {
+  color: #00ffff;
+}
+/* ==== ANIMASI SCROLL ==== */
+section, .card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease, box-shadow 1s ease;
+}
+
+section.show, .card.show {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}

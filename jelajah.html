@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOM.F</title>
+  <link rel="stylesheet" href="jelajah.css" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Jelajahi <span>TechUnity</span></h1>
+      <p>Mengenal lebih dekat profil dan dokumentasi kegiatan kami.</p>
+      <button id="loginBtn">Login Admin</button>
+    </div>
+  </section>
+
+  <!-- POPUP LOGIN ADMIN -->
+  <div id="loginPopup" class="popup">
+    <!-- GANTI PASSWORD POPUP -->
+<div id="changePassPopup" class="popup">
+  <div class="popup-content">
+    <span id="closeChangePass" class="close">&times;</span>
+    <h2>Ganti Password Admin</h2>
+    <label>Password Lama:</label>
+    <input type="password" id="oldPassword" placeholder="Password lama">
+    <label>Password Baru:</label>
+    <input type="password" id="newPassword" placeholder="Minimal 5 karakter">
+    <button id="submitChangePass">Simpan Password</button>
+  </div>
+</div>
+
+    <div class="popup-content">
+      <h2>Login Admin</h2>
+      <input type="password" id="adminPassword" placeholder="Masukkan Password Admin" />
+      <button id="submitLogin">Masuk</button>
+      <button id="closeLogin">Tutup</button>
+    </div>
+  </div>
+
+  <!-- PROFIL -->
+  <section class="profil fade-in" id="profil">
+    <h2>Profil Kami</h2>
+    <p>TechUnity adalah komunitas teknologi muda yang berfokus pada pengembangan skill digital, inovasi, dan kolaborasi.</p>
+  </section>
+
+  <!-- DATA ANGGOTA -->
+  <section class="anggota-section fade-in" id="anggota">
+    <h2>Data Anggota</h2>
+
+    <div id="adminTools" class="admin-tools hidden">
+      <form id="formAnggota">
+        <input type="text" id="nama" placeholder="Nama Anggota" />
+        <input type="text" id="jabatan" placeholder="Jabatan" />
+        <input type="file" id="foto" accept="image/*" />
+        <button type="submit">Tambah Anggota</button>
+      </form>
+
+      <div class="filter-area">
+        <input type="text" id="searchInput" placeholder="Cari anggota..." />
+        <select id="filterSelect">
+          <option value="semua">Semua Jabatan</option>
+          <option value="Ketua">Ketua</option>
+          <option value="Wakil">Wakil</option>
+          <option value="Sekretaris">Sekretaris</option>
+          <option value="Bendahara">Bendahara</option>
+          <option value="Anggota">Anggota</option>
+        </select>
+      </div>
+
+      <div class="export-tools">
+        <button id="exportExcel">📁 Ekspor Excel</button>
+        <button id="exportPdf">🖨️ Ekspor PDF</button>
+        <button id="changePassBtn" class="change-pass-btn">Ganti Password</button>
+      </div>
+    </div>
+
+    <div id="anggotaList" class="anggota-list fade-in"></div>
+  </section>
+
+  <!-- DOKUMENTASI -->
+  <section class="dokumentasi fade-in" id="dokumentasi">
+    <h2>Dokumentasi Kegiatan</h2>
+    <div class="gallery">
+      <img src="57bf94fcab853c57b8f9822dcea2a066.jpg" alt="Kegiatan 1" />
+      <img src="img/event2.jpg" alt="Kegiatan 2" />
+      <img src="img/event3.jpg" alt="Kegiatan 3" />
+      <img src="img/event4.jpg" alt="Kegiatan 4" />
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 TechUnity | Membangun Generasi Digital.</p>
+    <a href="index.html" class="back-btn">Kembali ke Beranda</a>
+  </footer>
+
+  <script src="jelajah.js"></script>
+</body>
+</html>
